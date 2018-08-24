@@ -36,7 +36,7 @@ for linea in archivo.readlines():
     for i in lista: # Se hace un for para realizar la comparación de caracter por caracter
         numero = i
         if not isinstance(i, (str)): #Si es alfabético se busca en el diccionario el número
-           numero = buscar_diccionario("'" + i + "'")
+           numero = buscar_diccionario(i)
         # FALTA ASIGNARLE EL NUMERO RETORNADO EN LA VARIABLE NUMERO A LA POSICION DE LA LISTA
     convertir(lista, pila)
     x = str(evaluar(pila.desapilar()))
