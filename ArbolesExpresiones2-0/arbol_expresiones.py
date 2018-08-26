@@ -32,20 +32,17 @@ archivo = open("expresionesin.txt" , "r")
 
 for linea in archivo.readlines():
     linea = linea.strip("\n")
+    print (linea)
     lista = linea.split(" ")
+    j = 0
     for i in lista: # Se hace un for para realizar la comparación de caracter por caracter
-        numero = i
-        if not isinstance(i, (str)): #Si es alfabético se busca en el diccionario el número
-           numero = buscar_diccionario(i)
-        # FALTA ASIGNARLE EL NUMERO RETORNADO EN LA VARIABLE NUMERO A LA POSICION DE LA LISTA
+        numero = buscar_diccionario(i)
+        lista[j] = numero
+        j = j + 1
+    print (lista)
+    
     convertir(lista, pila)
     x = str(evaluar(pila.desapilar()))
     archivo_out = guardar_resultado(x)
-
+    
 archivo.close()
-
-
-#
-
-
-

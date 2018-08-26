@@ -32,6 +32,5 @@ d = {'a':1,
 
 #Ahora se crea una función que busque el valor que se necesite en el diccionario
 def buscar_diccionario(valor):
-     resultado = d.get(valor, "Este valor no está definido en el diccionario")
-     return resultado
-
+     resultado = d.get(valor, valor)
+     return str(resultado)
